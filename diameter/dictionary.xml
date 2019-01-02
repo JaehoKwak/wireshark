@@ -8002,8 +8002,49 @@
 		<!--
 		Note: The AVP codes from 3206 to 3308 are reserved for TS 29.338
 		-->
-
-
+		
+		<avp name="SC-Address" code="3300" mandatory="must" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
+			<type type-name="OctetString"/>
+		</avp>
+		<avp name="SM-RP-UI" code="3301" mandatory="must" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
+			<type type-name="OctetString"/>
+		</avp>
+		<avp name="TFR-Flags" code="3302" mandatory="must" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
+			<type type-name="Unsigned32"/>
+		</avp>
+		<avp name="SM-Delivery- Failure-Cause" code="3303" mandatory="must" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
+			<grouped>
+				<gavp name="SM-Enumerated-Delivery-Failure-Cause"/>
+				<gavp name="SM-Diagnostic-Info"/>
+			</grouped>
+		</avp>
+		<avp name="SM-Enumerated-Delivery-Failure-Cause" code="3304" mandatory="must" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
+			<type type-name="Enumerated"/>
+		</avp>
+		<avp name="SM-Diagnostic-Info" code="3305" mandatory="must" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
+			<type type-name="OctetString"/>
+		</avp>
+		<avp name="SM-Delivery-Timer" code="3306" mandatory="must" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
+			<type type-name="Unsigned32"/>
+		</avp>
+		<avp name="SM-Delivery-Start-Time" code="3307" mandatory="must" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
+			<type type-name="Time"/>
+		</avp>
+		<avp name="SM-RP-SMEA" code="3309" mandatory="must" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
+			<type type-name="OctetString"/>
+		</avp>
+		<avp name="Maximum-UE-Availability-Time" code="3329" mandatory="mustnot" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
+			<type type-name="Time"/>
+		</avp>
+		<avp name="Maximum-Retransmission-Time" code="3330" mandatory="mustnot" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
+			<type type-name="Time"/>
+		</avp>
+		<avp name="Requested-Retransmission-Time" code="3331"  mandatory="mustnot" vendor-bit="must" vendor-id="TGPP">
+			<type type-name="Time"/>
+		</avp>
+		<avp name="SMS-GMSC-Address" code="3332"  mandatory="mustnot" vendor-bit="must" vendor-id="TGPP">
+			<type type-name="OctetString"/>
+		</avp>
 		<avp name="Reason-Header" code="3401" mandatory="must" vendor-bit="must" may-encrypt="no" vendor-id="TGPP">
 			<type type-name="UTF8String"/>
 		</avp>
